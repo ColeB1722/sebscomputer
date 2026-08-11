@@ -17,7 +17,9 @@ intentionally nonexistent path:
 Do not replace it until Phase 1 has recorded the new drive's live model, serial,
 capacity, empty partition state, and `/dev/disk/by-id/` path. Immediately before
 running disko, verify all of those facts again and obtain explicit human
-confirmation. Never use `/dev/nvme*`, `/dev/sd*`, or `/dev/vd*`.
+confirmation. Never use `/dev/nvme*`, `/dev/sd*`, or `/dev/vd*`. The exact
+replacement procedure is `HANDOVER.md`; the identity source is the signed-off
+`transition-evidence/procedures/PHASE1-RECORD.md`.
 
 The Windows 980 PRO and data 860 PRO must not appear in this configuration. The
 new drive receives its own ESP; the Windows ESP is never mounted or referenced.
