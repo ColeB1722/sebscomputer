@@ -15,6 +15,18 @@
 
   networking.networkmanager.enable = true;
 
+  # The onboard Intel AX200 (iwlwifi) is this machine's primary network link;
+  # its firmware is redistributable but unfree-adjacent, so pin the intent
+  # explicitly rather than relying on the generated hardware config's mkDefault.
+  hardware.enableRedistributableFirmware = true;
+
+  # Compressed-RAM swap. Deliberately no disk-backed swap: swap on ZFS is a
+  # known deadlock hazard, and the pool owns the whole data partition.
+  zramSwap = {
+    enable = true;
+    memoryPercent = 25;
+  };
+
   programs.fish.enable = true;
 
   users.users.coleb = {
