@@ -1,16 +1,21 @@
 { lib, ... }:
 let
-  phase0Placeholder = "/dev/disk/by-id/PHASE1_REPLACE_WITH_NEW_NVME_BY_ID";
-  targetDisk = phase0Placeholder;
+  # Phase 1 identity, recorded live and signed off 2026-09-05 (CB) in
+  # transition-evidence/procedures/PHASE1-RECORD.md: physical label ==
+  # Windows Get-Disk AdapterSerialNumber == installer by-id, serial
+  # QH7499W100762P3100 (Lexar NQ780 2 TB, zero partitions at capture).
+  # Copied from reports/phase2-boot-a/by-id.txt, not typed from memory.
+  phase1RecordedPath = "/dev/disk/by-id/nvme-Lexar_SSD_NQ780_2TB_QH7499W100762P3100";
+  targetDisk = phase1RecordedPath;
 in
 {
   assertions = [
     {
-      assertion = targetDisk == phase0Placeholder;
+      assertion = targetDisk == phase1RecordedPath;
       message = ''
-        Phase 0 must use the nonexistent disk placeholder. In Phase 1, replace
-        targetDisk and this assertion only after recording and verifying the new
-        drive's live model, serial, capacity, partition state, and by-id path.
+        The disko target must remain the Phase 1-recorded Lexar NQ780 by-id
+        path. Changing it requires redoing the Phase 1 identity record and
+        sign-off in transition-evidence, never an inline edit.
       '';
     }
     {
