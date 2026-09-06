@@ -8,5 +8,6 @@
   ];
 
   networking.hostName = "sebscomputer";
+  services.getty.helpLine = "sebscomputer: Phase 2 base-system validation.";
   system.stateVersion = "26.05";
 }
