@@ -1,5 +1,10 @@
 # Phase 1 → Phase 2 Handover
 
+> **ARCHIVED 2026-09-27.** Superseded by [`~/dotfiles/PLAN.md`](https://github.com/ColeB1722/dotfiles/blob/main/PLAN.md), the single entry point for the NixOS transition. Kept as historical reference; status below is frozen and may be stale. Do not update this file.
+>
+> Completed 2026-09-05 (disko placeholder and hardware stub replaced; install succeeded).
+
+
 The exact procedure for replacing the Phase 0 placeholder with the real drive
 identity, and for replacing the hardware stub with generated configuration.
 Nothing here authorizes a destructive command; disko execution keeps its own

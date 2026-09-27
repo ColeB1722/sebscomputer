@@ -1,5 +1,10 @@
 # sebscomputer
 
+> **ARCHIVED 2026-09-27.** Superseded by [`~/dotfiles/PLAN.md`](https://github.com/ColeB1722/dotfiles/blob/main/PLAN.md), the single entry point for the NixOS transition. Kept as historical reference; status below is frozen and may be stale. Do not update this file.
+>
+> The configuration now lives in `ColeB1722/dotfiles` under `hosts/sebscomputer/` and `modules/nixos/`, with this repository's history merged in. This repository is read-only.
+
+
 NixOS system configuration for the physical `sebscomputer` desktop. The initial
 scope is the inert Phase 2 foundation: a bootable TTY system on its own ZFS NVMe.
 
